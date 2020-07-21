@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 ruby '>= 2.4.0', '< 2.6'
 gem 'rails', '4.2.10'
+gem 'sprockets', '3.6.3'
 
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
