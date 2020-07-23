@@ -1,0 +1,18 @@
+%h3 Movies with same director as #{@movie.title}
+
+%table#movies.table.table-striped.col-md-12
+  %thead
+    %tr
+      %th Title
+      %th Rating
+      %th Release Date
+      %th Director
+      %th More Info
+  %tbody
+    - @similar_movies.each do |movie|
+      %tr
+        %td= movie.title
+        %td= movie.rating
+        %td= movie.release_date
+        %td= movie.director
+        %td= link_to "More about #{movie.title}", movie_path(movie)

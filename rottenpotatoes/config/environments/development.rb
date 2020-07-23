@@ -28,4 +28,19 @@ Rottenpotatoes::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  config.generators do |g|
+    g.test_framework :rspec
+    g.fixture_replacement :factory_bot
+    g.factory_bot dir: 'spec/factories'
+    g.controller_specs false
+    g.request_specs true
+    g.helper_specs false
+    g.feature_specs true
+    g.mailer_specs true
+    g.model_specs true
+    g.observer_specs false
+    g.routing_specs false
+    g.view_specs false
+  end
 end
